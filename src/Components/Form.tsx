@@ -3,45 +3,43 @@ import Input from "./Input";
 import Button from "./Button";
 
 const Form: React.FC = () => {
-  const [firstName, setUser] = useState<string>("");
-  const [lastName, setLast] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [password, setPass] = useState<string>("");
-  type FormModel = {
-    Password: string;
-    Email: string;
-    isActive: number;
-    UserName: string;
-  };
+  const [content, set] = useState<string>("");
+  // const [lastName, setLast] = useState<string>("");
+  // const [email, setEmail] = useState<string>("");
+  // const [password, setPass] = useState<string>("");
+  // type FormModel = {
+  //   Password: string;
+  //   Email: string;
+  //   isActive: number;
+  //   UserName: string;
+  // };
 
-  const SaveUser = () => {
-    //: object
-    const obj: FormModel = {
-      Password: password,
-      Email: email,
-      isActive: 0,
-      UserName: firstName + " " + lastName,
-    };
+  // const SaveUser = () => {
+  //   //: object
+  //   const obj: FormModel = {
+  //     Password: password,
+  //     Email: email,
+  //     isActive: 0,
+  //     UserName: firstName + " " + lastName,
+  //   };
 
-    console.log("save user", obj);
-    // return obj;
-  };
+  //   console.log("save user", obj);
+  //   // return obj;
+  // };
   return (
     <div className="Form">
-      <h3 className="text-white text-3xl tracking-tight">
+      {/* <h3 className="text-white text-3xl tracking-tight">
         Join our <span className="text-blue-600 font-bold">Team</span> ❗
-      </h3>
-      <form className="mt-6 sm:mt-9" onSubmit={SaveUser}>
+      </h3> */}
+      <form className="mt-6 sm:mt-9">
+        <Input value={content} setter={set} placeholder={""} />
+
+        {/* onSubmit={SaveUser}> */}
         {/* USER NAME */}
-        <div className="sm:flex gap-3 w-full">
-          <Input
-            value={firstName}
-            setter={setUser}
-            placeholder={"First Name"}
-          />
+        {/* <div className="sm:flex gap-3 w-full">
           <Input value={lastName} setter={setLast} placeholder={"Last Name"} />
         </div>
-        {/* EMAIL & PASSWORD */}
+        {/* EMAIL & PASSWORD /}
         <Input
           value={email}
           setter={setEmail}
@@ -61,7 +59,7 @@ const Form: React.FC = () => {
             <span> Terms of Service </span>and
             <span> Privacy Policy</span>.
           </span>
-        </div>
+        </div> */}
       </form>
     </div>
   );
