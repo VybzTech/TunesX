@@ -4,7 +4,7 @@ const PlatformContext = createContext("");
 
 export const usePlatform = () => useContext(PlatformContext);
 
-export const StatusProvider = ({ children }: any) => {
+export const PlatformProvider = ({ children }: any) => {
   const [platform, setPlatform] = useState<string>("");
 
   return (

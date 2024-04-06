@@ -41,12 +41,12 @@ const Navbar = () => {
       </div>
       {/* SOCIALS */}
       <div className="flex flex-col gap-3 items-center justify-center">
-      {socials?.map((social) => {
-          return <NavIcon name={social.name} icon={social.icon} />;
+      {socials?.map((social,id) => {
+          return <NavIcon key={id} name={social.name} icon={social.icon} />;
         })}
         </div>
       <NavIcon name={"New"} icon={<IoAdd />} />
-      <p className="text-xs text-stone-600 text-center">&copy;VybzTech</p>
+      <p className="text-xs text-stone-600 text-center">&copy; VybzTech</p>
     </div>
   );
 };

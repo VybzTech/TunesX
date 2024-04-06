@@ -11,10 +11,10 @@ const Input: React.FC = (props: InputProps) => {
   return (
     <div className="w-full mb-2.5">
       <input
-        className="trans w-full text-zinc-300 px-3 py-4 rounded rounded-[9px] bg-[#2e2e2e] border border-[.1rem] border-zinc-600 focus:outline-none focus:border-zinc-400"
+        className="trans input"
         type={type ?? "text"}
         value={value}
-        min={3}
+        min={10}
         placeholder={placeholder}
         onChange={
           type
